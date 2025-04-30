@@ -22,20 +22,19 @@
                         <div class="navbar-brand text-left">
                             <a href="index.html" class="hope">Jasmine</a>
                         </div>
-
                         <ul class="navbar-links">
                             <li><a href="#home">Home</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#projects">Projects</a></li>
-                            <li><a href="#more">More</a></li>
+                            
                         </ul>
+
+                        <div> <a href="#contact" class="btn btn-primary">Contact Me</a></div>
+                         
                     </div>
                 </div>
 
-                <div class="right">
-                    <!-- Contact Button: links to mailto -->
-                    <a href="mailto:afline47@gmail.com" class="btn btn-primary">Contact</a>
-                </div>
+             
 
                 <!-- Hamburger Icon -->
                 <div class="hamburger" id="hamburger-icon">
@@ -49,15 +48,20 @@
 
     <div class="hero flex items-centre justify-between">
         <div class="left flex-1 justify-center">
-            <img src="images/image.png" alt="Profile" />
+            <img src="images/high-angle-desktop-with-laptop-copy-space.jpg" alt="Profile" />
         </div>
+
         <section class="home" id="home">
             <div class="right flex-1">
-                <h6>Afline Jasmine</h6>
+                <div class="contact-button-container">
+            
+                </div>
+                <h1 class="glowing-text">Afline Jasmine</h1>
                 <h1>I'm a Web<br /><span>Developer</span></h1>
-                <button class="btn btn-secondary" onclick="window.location.href='#';">DOWNLOAD CV</button>
+                <a href="documents/MY CURRICULUM VITAE-2.pdf" download class="btn btn-secondary scroll-animate" id="download-cv">DOWNLOAD CV</a>
+
             </div>
-        </section>
+        </section>  
     </div>
 
     <section class="about" id="about">
@@ -105,17 +109,25 @@
                 </div>
             </div>
         </div>
+    
+        <div class="right">
+            <!-- Contact Button: links to mailto -->
+      
+            <section class="contact" id="contact">
+                <div class="container">
+                  <h1>Contact <span>Me</span></h1>
+                  <form action="#" method="post">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                  </form>
+                </div>
+              </section>
+        </div>
+        
     </section>
-
-    <script>
-        // JavaScript to toggle the hamburger menu
-        const hamburgerIcon = document.getElementById('hamburger-icon');
-        const navbarLinks = document.querySelector('.navbar-links');
-
-        hamburgerIcon.addEventListener('click', () => {
-            navbarLinks.classList.toggle('active');
-        });
-    </script>
+    <script src="/css/main.js"></script>
 </body>
 
 </html>
