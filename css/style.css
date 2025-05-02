@@ -41,6 +41,8 @@ header nav .logo {
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: var(--bgDark);
+  color: var(--white);
 }
 
 .container {
@@ -155,6 +157,8 @@ body {
 }
 
 section {
+  background-color: var(--bgDark);
+  color: var(--white);
   padding: 6rem;
 }
 
@@ -199,7 +203,7 @@ section.about .socials a:hover {
 }
 
 section.projects .card {
-  background: var(--white);
+  background: #1a1a1a;
   padding: 2rem;
   text-align: center;
   border-radius: 8px;
@@ -263,7 +267,7 @@ section.services {
 }
 
 section.services .card-grid .card {
-  background: var(--white);
+  background: #1a1a1a;
   padding: 3rem 2rem;
   position: relative;
   text-align: center;
