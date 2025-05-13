@@ -1,25 +1,43 @@
-// Run when the page is fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-    // HAMBURGER MENU TOGGLE
-    const hamburgerIcon = document.getElementById('hamburger-icon');
-    const navbarLinks = document.querySelector('.navbar-links');
-  
-    hamburgerIcon.addEventListener('click', () => {
-      navbarLinks.classList.toggle('active');
-    });
-  
-    // SCROLL ANIMATIONS
-    const animatedElements = document.querySelectorAll('.scroll-animate');
-  
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-  
-    animatedElements.forEach(el => observer.observe(el));
+document.addEventListener("DOMContentLoaded", () => {
+  // Hamburger menu toggle
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const navbarLinks = document.querySelector('.navbar-links');
+
+  hamburgerIcon.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+    hamburgerIcon.classList.toggle('active');
   });
+
+  // Scroll animations
+  const animatedElements = document.querySelectorAll('.scroll-animate');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  animatedElements.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight * 0.9) {
+      el.classList.add('visible');
+    } else {
+      observer.observe(el);
+    }
+  });
+});
+
+
+// Animate skill progress bars when page loads
+const progressBars = document.querySelectorAll('.progress');
+
+progressBars.forEach(bar => {
+  // Get the target width from style attribute (like "width: 90%")
+  const targetWidth = bar.getAttribute('style').match(/width:\s*(\d+%)/)[1];
+  bar.style.width = '0'; // Reset width initially
+  setTimeout(() => {
+    bar.style.width = targetWidth; // Animate to target
+  }, 500);
+});
