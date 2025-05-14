@@ -41,3 +41,24 @@ progressBars.forEach(bar => {
     bar.style.width = targetWidth; // Animate to target
   }, 500);
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // existing hamburger + scroll animation code...
+
+    // Skill progress animation
+    const skillBars = document.querySelectorAll('.progress');
+
+    const skillObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const progress = entry.target.getAttribute('data-progress');
+          entry.target.style.width = progress;
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+
+    skillBars.forEach(bar => skillObserver.observe(bar));
+});
