@@ -60,6 +60,23 @@ header nav .left a:hover {
   color: var(--primary);
 }
 
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--white);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+
 /* Hero Section Styles */
 .hero {
   padding-top: 2rem;
@@ -598,6 +615,8 @@ footer {
 .navbar-links.active {
   display: block;
 }
+
+
 
 /* Media Queries */
 @media (max-width: 768px) {
