@@ -104,6 +104,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
+
 .hero .right h1 {
   font-size: 4rem;
   font-weight: 100;
@@ -348,6 +349,10 @@ section.projects .card {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+h1 {
+  text-align: center;
+}
+
 section.projects .card img {
   max-width: 100%;
   border-radius: 6px;
@@ -445,6 +450,11 @@ section.contact {
   background: var(--bgLight);
   padding: 12rem 6rem;
 }
+
+h2 {
+  text-align: center;
+}
+
 
 .contact h1 {
   text-align: center;
@@ -611,6 +621,7 @@ footer {
 .navbar-links {
   display: flex;
 }
+
 
 .navbar-links.active {
   display: block;
