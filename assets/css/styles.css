@@ -22,6 +22,41 @@ html, body {
   background: linear-gradient(90deg, var(--accent-from), var(--accent-to));
 }
 
+/* Project overlay */
+.project-overlay {
+  pointer-events: none;
+}
+.project-card:hover .project-overlay {
+  pointer-events: auto;
+}
+.project-overlay .badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+}
+
+.project-link {
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.project-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(124,58,237,0.15);
+}
+
+/* Modal styles */
+#project-modal {
+  display: none;
+}
+#project-modal.show {
+  display: flex;
+}
+.modal-backdrop { z-index: 40; }
+#project-modal .bg-white { z-index: 50; }
+
 /* subtle focus outline for accessibility */
 :focus {
   outline: 2px solid rgba(124, 58, 237, 0.25);
