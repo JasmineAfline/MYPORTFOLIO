@@ -1,7 +1,29 @@
-.project-card {
-  transition: transform 0.3s;
+/* Small utility styles for polish */
+:root {
+  --accent-from: #7c3aed; /* purple-600 */
+  --accent-to: #ec4899; /* pink-500 */
 }
 
-.project-card:hover {
-  transform: scale(1.05);
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.project-card, .rounded-xl {
+  transition: transform 0.35s, box-shadow 0.35s;
+}
+
+.project-card:hover, .rounded-xl:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(16, 24, 40, 0.12);
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, var(--accent-from), var(--accent-to));
+}
+
+/* subtle focus outline for accessibility */
+:focus {
+  outline: 2px solid rgba(124, 58, 237, 0.25);
+  outline-offset: 2px;
 }
